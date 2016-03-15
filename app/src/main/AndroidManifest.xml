@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.xueyi.dingweimapapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+     
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="2a8f9e1714b1ea44b98ea154c4220b29" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DiTuDingWeiActivity" />
+        <activity android:name="com.app.xueyi.activity.JiaYouZhANActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PoiKeywordSearchActivity" />
+        <activity android:name=".PoiSearchActivity" />
+        <activity android:name="com.app.xueyi.adapter.PoiSearchAdapter" />
+        <activity android:name=".PoiAroundSearchActivity" />
+        <activity android:name=".LocationActivity" />
+        <activity android:name=".MapLocationTestActivity" />
+        <activity android:name=".MultipleRoutePlanningActivity" />
+        <activity android:name="com.app.xueyi.activity.SimpleNaviActivity" />
+        <activity android:name="com.app.xueyi.activity.LocationTestActivity" />
+        <activity android:name="com.app.xueyi.activity.NavigationActivity"></activity>
+    </application>
+
+</manifest>
